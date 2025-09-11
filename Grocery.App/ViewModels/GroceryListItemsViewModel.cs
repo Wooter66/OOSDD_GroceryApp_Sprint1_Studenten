@@ -8,7 +8,7 @@ namespace Grocery.App.ViewModels
     [QueryProperty(nameof(GroceryList), nameof(GroceryList))]
     public partial class GroceryListItemsViewModel : BaseViewModel
     {
-        private IGroceryListItemsService _groceryListItemsService { get; }
+        private readonly IGroceryListItemsService _groceryListItemsService;
         public ObservableCollection<GroceryListItem> MyGroceryListItems { get; set; } = [];
 
         [ObservableProperty]
